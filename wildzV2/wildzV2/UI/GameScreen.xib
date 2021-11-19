@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GameScreenView" customModule="wildzV2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameScreen" translatesAutoresizingMaskIntoConstraints="NO" id="LrT-1d-AUq">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet1" translatesAutoresizingMaskIntoConstraints="NO" id="lyN-eN-JB6">
+                    <rect key="frame" x="20" y="1869" width="374" height="296"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="296" id="A2X-w2-kom"/>
+                        <constraint firstAttribute="width" constant="374" id="xYy-k1-tN0"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet2" translatesAutoresizingMaskIntoConstraints="NO" id="Q2d-cf-Ds0">
+                    <rect key="frame" x="20" y="84" width="374" height="296"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="374" id="2Dm-1k-VGx"/>
+                        <constraint firstAttribute="height" constant="296" id="uZ1-La-BzE"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Q2d-cf-Ds0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="1xr-a7-bcO"/>
+                <constraint firstItem="lyN-eN-JB6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Cge-wC-dtY"/>
+                <constraint firstItem="LrT-1d-AUq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EIv-6r-DDN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Q2d-cf-Ds0" secondAttribute="trailing" constant="20" id="GaR-Hj-oT0"/>
+                <constraint firstItem="Q2d-cf-Ds0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="O4E-BO-Te4"/>
+                <constraint firstAttribute="bottom" secondItem="lyN-eN-JB6" secondAttribute="bottom" constant="-165" id="RJ0-0l-86z"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lyN-eN-JB6" secondAttribute="trailing" constant="20" id="cWb-7f-9Pw"/>
+                <constraint firstAttribute="bottom" secondItem="LrT-1d-AUq" secondAttribute="bottom" id="kNl-VA-f8q"/>
+                <constraint firstItem="LrT-1d-AUq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ptE-M7-ptQ"/>
+                <constraint firstAttribute="trailing" secondItem="LrT-1d-AUq" secondAttribute="trailing" id="vzO-lN-s8j"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lowerPlanet" destination="lyN-eN-JB6" id="6VF-CV-Ur0"/>
+                <outlet property="upperPlanet" destination="Q2d-cf-Ds0" id="afY-K6-8nH"/>
+            </connections>
+            <point key="canvasLocation" x="205.79710144927537" y="-23.4375"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gameScreen" width="1242" height="5939"/>
+        <image name="planet1" width="278" height="279"/>
+        <image name="planet2" width="363" height="360"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
